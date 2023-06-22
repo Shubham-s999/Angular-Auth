@@ -1,11 +1,13 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Route } from '@angular/router';
 
-import { LoginComponent } from './login/login.component';
-import { RegisterComponent } from './register/register.component';
-import { HomeComponent } from './home/home.component';
+
 
 import { AuthGuard } from './auth-guard.service';
+import { LoginComponent } from './auth/login/login.component';
+import { RegisterComponent } from './auth/register/register.component';
+import { HomeComponent } from './pages/home/home.component';
+import { FinanceComponent } from './pages/finance/finance.component';
 
 const routes: Route[] = [
   {
@@ -19,6 +21,11 @@ const routes: Route[] = [
   {
     path: 'home',
     component: HomeComponent,
+    canActivate: [AuthGuard],
+  },
+  {
+    path: 'managment',
+    component: FinanceComponent,
     canActivate: [AuthGuard],
   },
   //Using Pathmatch Full mehod(for route with empty and redirectTo to equal route). this method need initial login path declaration

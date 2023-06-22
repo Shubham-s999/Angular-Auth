@@ -24,5 +24,6 @@ export class AuthService {
 
   logInUser(email: string, password: string) {
     // return firebase.auth().signInWithEmailAndPassword(email, password);
+    return {validate: true};
   }
 }
