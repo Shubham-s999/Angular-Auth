@@ -3,15 +3,15 @@ import { BrowserModule } from '@angular/platform-browser';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 
 import { AppComponent } from './app.component';
-import { LoginComponent } from './login/login.component';
-import { RegisterComponent } from './register/register.component';
-import { HomeComponent } from './home/home.component';
 
 import { AuthService } from './auth.service';
 import { AuthGuard } from './auth-guard.service';
-import { LoaderComponent } from './loader/loader.component';
 import { AppRoutinModule } from './app-routing.module';
 import { FlexLayoutModule } from '@angular/flex-layout';
+import { LoginComponent } from './auth/login/login.component';
+import { RegisterComponent } from './auth/register/register.component';
+import { HomeComponent } from './pages/home/home.component';
+import { LoaderComponent } from './shared/common/loader/loader.component';
 
 @NgModule({
   imports: [

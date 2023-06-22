@@ -1,0 +1,10 @@
+<div class="wrapper" fxLayout="column" fxLayoutAlign="center center" *ngIf="!isLoading">
+  <span>Welcome To HomePage !!!</span> <br />
+  <br />
+  <button (click)="onLogOut()">Log Out</button>
+  <br />
+  <button (click)="onAccount()">Account</button>
+</div>
+<div class="wrapper" fxLayout="column" fxLayoutAlign="center center" *ngIf="isLoading">
+  <app-loader></app-loader>
+</div>
